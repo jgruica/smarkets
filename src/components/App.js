@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Route } from 'react-router-dom';
-import TopMarkets from './TopMarkets.js'
-import Market from './Market.js'
-
+import TopMarkets from './TopMarkets'
+import Details from './Details'
 
 class App extends Component {
   constructor(props) {
@@ -23,13 +22,18 @@ class App extends Component {
       })
   }
 
-
   render() {
     return (
       <div className='app' >
         <Route exact path='/'
           render={(props) => <TopMarkets {...props}
             topMarkets={this.state.topMarkets}
+            clickOnMarket={this.clickOnMarket}
+          />}
+        />
+        <Route exact path='/:marketId'
+          render={(props) => <Details {...props}
+            event={this.state.event}
           />}
         />
   
