@@ -1,21 +1,10 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import Smarkets from './components/Smarkets'
-
-class App extends Component {
-  render() {
-    return (
-      <div className='smarkets'>
-        <div className='main-game'>
-          <Smarkets />
-        </div>
-      </div>
-    )
-  }
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
+import './styles/index.css';
+import App from './components/App';
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>, document.getElementById('root'));
