@@ -5,6 +5,11 @@ body {
   background-color: #000
   
 }
+
+.app {
+  margin: 20px;
+}
+
 .top-markets h1 {
   color: white
 }
@@ -35,8 +40,18 @@ body {
   font-size: 15px;
 }
 
+.back {
+  margin: 10px;
+}
+.back a{
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: #18211F;
+  color: #00b073;
+  padding: 8px 16px;
+} 
+
 .details {
-  margin: 70px;
   color: #00b073;
 }
 

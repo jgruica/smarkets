@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import moment from 'moment'
+import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
 
 
@@ -29,7 +30,9 @@ class Details extends Component {
             const g = e.contract_groups[e.event.primary_contract_group_id]
             const contracts = g.contracts.map(c => e.contracts[c])
             return (
+                
                 <div className='details'>
+                <div className='back'> <Link to='/'>  &#8249; BACK </Link> </div>
                     <h1> {e.event.name}</h1>
 
                     <span className='type'> {e.event.event_type} </span>
@@ -42,8 +45,8 @@ class Details extends Component {
 
                     <h2> {g.name} </h2>
                     <ListGroup>
-                        {contracts.map(c =>
-                            <ListGroupItem>
+                        {contracts.map((c,index) =>
+                            <ListGroupItem key={index}>
                                 {c.name}
                             </ListGroupItem>
                         )}
@@ -53,7 +56,7 @@ class Details extends Component {
             )
         } else {
             return (
-                <div class='loader'></div>
+                <div className='loader'></div>
             )
         }
     }
