@@ -41,7 +41,8 @@ body {
 }
 
 .back {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .back a{
@@ -79,7 +80,6 @@ body {
   width: 500px;
   margin: 0;
 }
-
 
 .details .list-group-item {
   margin-top: 10px;
