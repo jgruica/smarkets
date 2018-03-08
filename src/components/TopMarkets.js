@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Market from './Market'
 
+
 class TopMarkets extends Component {
     render() {
         if (this.props.topMarkets) {
@@ -9,19 +10,19 @@ class TopMarkets extends Component {
                     <Market
                         key={index}
                         market={market}
-                        clickOnMarket={this.props.clickOnMarket}
                     />
                 )
             });
             return (
                 <div className='top-markets'>
+                <h1> Top Markets </h1>
                     {list}
                 </div>
 
             );
         } else {
             return (
-                <div> Loading </div>
+                <div class='loader'></div>
             )
         }
 

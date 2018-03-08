@@ -36,7 +36,6 @@ class App extends Component {
             event={this.state.event}
           />}
         />
-  
       </div>
     )
   }
